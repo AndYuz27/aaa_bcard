@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Card</title>
+    <style>
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            align-content: center;
+            margin: 0;
+            gap: 30px;
+        }
+        dream-cc {
+            /*box-shadow: 0 0 5px 0 #0006;*/
+            background-color: aliceblue;
+        }
+        dream-bc {
+            background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(151,151,255,1) 0%, rgba(0,212,255,1) 100%);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" name="user">
+        <input type="text" name="prof">
+        <input type="email" name="mail">
+        <input type="tel" name="tel">
+        <select name="logo">
+            <option value="square-youtube">YouTube</option>
+            <option value="discord">Дискорд</option>
+            <option value="microsoft">Майкрософт</option>
+            <option value="yandex">Яндекс</option>
+            <option value="react">Реакт</option>
+            <option value="amazon">Amazon</option>
+            <option value="java">Java</option>
+        </select>
+    </form>
+    <dream-bc user="Andy" prof="Developer" tel="+7(123)456-78-90" mail="654@321.ru" logo="java"></dream-bc>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
