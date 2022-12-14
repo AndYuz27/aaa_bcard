@@ -1,29 +1,11 @@
-import Card from "./components/Card/index.js";
-import BC from "./components/BC/index.js";
+import BCard from "./components/BCard/index.js";
 
-if (!customElements.get("dream-cc")) {
-    customElements.define("dream-cc", Card);
+if (!customElements.get("aaa-bcard")) {
+    customElements.define("aaa-bcard", BCard);
 }
-if (!customElements.get("dream-bc")) {
-    customElements.define("dream-bc", BC);
-}
-
-fetch("https://fakerapi.it/api/v1/credit_cards?_quantity=3")
-    .then(res => res.json())
-    .then(data => {
-        data.data.forEach(card => {
-            let tag = document.createElement("dream-cc");
-            // console.log(card);
-            tag.setAttribute("user", card.owner);
-            tag.setAttribute("number", card.number);
-            tag.setAttribute("expire", card.expiration);
-            tag.setAttribute("type", card.type);
-            document.body.append(tag);
-        })
-    })
 
 const form = document.forms[0];
-const bc = document.querySelector("dream-bc");
+const bc = document.querySelector("aaa-bcard");
 
 const formHandler = e => {
     let el = e.target;

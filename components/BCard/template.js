@@ -7,19 +7,22 @@ export default {
     },
     html(data) {
         return `
-            <div class="dream-bc">
-                <div class="dream-bc__logo"><i class="fa-brands fa-${data.logo}"></i></div>
-                <div class="dream-bc__line">${data.prof}</div>
-                <div class="dream-bc__line">${data.mail}</div>
-                <div class="dream-bc__line">${data.tel}</div>
-                <div class="dream-bc__user">${data.user}</div>
+            <div class="bcard">
+               <div class="aaa">
+                <div class="logo"><i class="fa-brands fa-${data.logo}"></i></div>
+                </div>
+                <div class="aab">
+                <div class="user">${data.user}</div>
+                <div class="line">${data.prof}</div>
+                <div class="line">${data.mail}</div>
+                <div class="line">${data.tel}</div>
+                </div>
             </div>
         `;
     },
     css() {
         return `<style>
-            @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
-            .dream-bc {
+            .bcard {
                 width: 85.6mm;
                 height: 53.98mm;
                 border-radius: 3.18mm;
@@ -31,18 +34,24 @@ export default {
                 align-content: space-between;
                 font-size: 16pt;
                 font-family: sans-serif;
+                background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(151,151,255,1) 0%, rgba(0,212,255,1) 100%);
+color: whitesmoke;
             }
-            .dream-bc__logo {
+            .logo {
                 grid-row-end: span 3;
-                font-size: 55pt;
+                font-size: 32pt;
             }
-            .dream-bc__user {
-                align-self: flex-end;
+            .user {
                 font-size: 2em;
                 grid-column-end: span 2;
             }
-            .dream-bc__line {
+            .line {
                 font-size: .7em;
+                padding-bottom: 6px;
+            }
+            .aab{
+                margin: 35px;
             }
         </style>`
     }

@@ -1,6 +1,6 @@
 import Template from "./template.js";
 
-export default class BC extends HTMLElement {
+export default class BCard extends HTMLElement {
     static get observedAttributes() {
         return ["logo", "mail", "user", "tel", "prof"]
     }
@@ -13,6 +13,7 @@ export default class BC extends HTMLElement {
                 tel: this.tel,
                 prof: this.prof
             });
+            console.log(name)
         }
     }
     connectedCallback() {
